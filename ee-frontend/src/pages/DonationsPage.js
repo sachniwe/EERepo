@@ -24,23 +24,15 @@ export class DonationsPage extends React.Component {
     render() {
         return (
             <div>
-                <h2 className="display-4 mb-6">Donated Items</h2>
-                <div className="row"></div>
-                <div>
-                    <div data-testis="itemGroup">
-                        {this.state.items.map(item => {
+                <h3>Donated Items</h3>
+                <ul className="items">
+                {this.state.items.map(item => {
                             return (<DonationItem item={item} />);
                         }
                         )}
-                    </div>
-                </div>
-                <div className="row"></div>
-
-                <label>Total amount: </label>
-                <br />
-                <button type="button" className="btn btn-primary">Checkout</button>
-
+                </ul>
             </div>
+
 
         )
     }

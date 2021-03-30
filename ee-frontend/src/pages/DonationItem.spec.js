@@ -18,7 +18,7 @@ const setup = (propItem = item) => {
 };
 
 
-describe('SalesItem', () => {
+describe('DonatedItem', () => {
     it('has image', () => {
         const { container } = setup();
         const image = container.querySelector('img');

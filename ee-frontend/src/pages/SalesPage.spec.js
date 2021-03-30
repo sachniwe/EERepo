@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, waitFor } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import { SalesPage } from './SalesPage';
 import * as itemsCalls from '../services/ItemsService';
 
@@ -51,20 +51,11 @@ describe('SalesPage', () => {
 
     it('has header of Sales', () => {
       const { container } = render(<SalesPage />);
-      const header = container.querySelector('h2');
+      const header = container.querySelector('h3');
       expect(header).toHaveTextContent('Baked Items');
     });
 
-    it('has label for Total Amount', () => {
-      const { container } = render(<SalesPage />);
-      const totalAmountLabel = container.querySelector('label');
-      expect(totalAmountLabel).toHaveTextContent('Total amount:');
-    });
-    it('has Checkout button', () => {
-      const { container } = render(<SalesPage />);
-      const button = container.querySelector('h2');
-      expect(button).toBeInTheDocument();
-    })
+
   })
 
   describe('Lifecycle', () => {

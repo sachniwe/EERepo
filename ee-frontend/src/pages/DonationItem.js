@@ -1,25 +1,22 @@
 import React from 'react';
+import formatCurrency from '../utils';
 
 
 const DonationItem = (props) => {
     return (
 
-        
-
-        <div className="col-md-3">
-            <li class="nav-item">
-                <a class="nav-link" href="/cakes/cinnamon-lakeside/c/261">
-                <span>Cinnamon Lakeside
-                </span>
-                </a>
-            </li>
-            <p>
-                <button>
-                    <img src={`/images/${props.item.image}`} width="200" height="200" />
-                </button>
-            </p>
-            <h4 style={{ 'text-position': 'absolute' }}>{props.item.price}€</h4>
-        </div>
+      <div className="item">
+            <a href="#">
+                <img src={`/images/${props.item.image}`}/>
+                
+            </a>
+            <div className="item-name">
+                <div>{props.item.name}</div>
+            </div>
+            <div className="item-price">
+                <div>{formatCurrency(props.item.price)}</div>
+            </div>
+    </div>
 
 
     );

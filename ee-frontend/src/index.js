@@ -6,19 +6,32 @@ import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.css';
 import SalesPage from './pages/SalesPage';
 import DonationsPage from './pages/DonationsPage';
-import Header from './pages/Header';
+import CartView from './pages/CartView';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Header/>
-    <BrowserRouter>
-      <div>
-        <Route path="/bakedItems" component={SalesPage} />
-        <Route path="/donations" component={DonationsPage} />
+    <div className="grid-container">
+      <header>
+        <a href="#">EE Sales</a> &nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="/bakedItems">Baked Items</a> &nbsp;&nbsp;
+        <a href="/donations">Donations</a> &nbsp;&nbsp;
+      </header>
+    </div>
+    <main>
+      <div className="content">
+      <BrowserRouter>
+        <div>
+          <Route path="/bakedItems" component={SalesPage} />
+          <Route path="/donations" component={DonationsPage} />
+        </div>
+        
+      </BrowserRouter>
       </div>
-    </BrowserRouter>
+      <div className="sidebar">
+        <CartView/>
+      </div>
     
-    
+    </main>
     
   </React.StrictMode>,
   document.getElementById('root')

@@ -48,20 +48,11 @@ describe('DonationsPagePage', () => {
 
         it('has header of Sales', () => {
             const { container } = render(<DonationsPage />);
-            const header = container.querySelector('h2');
+            const header = container.querySelector('h3');
             expect(header).toHaveTextContent('Donated Items');
         });
 
-        it('has label for Total Amount', () => {
-            const { container } = render(<DonationsPage />);
-            const totalAmountLabel = container.querySelector('label');
-            expect(totalAmountLabel).toHaveTextContent('Total amount:');
-        });
-        it('has Checkout button', () => {
-            const { container } = render(<DonationsPage />);
-            const button = container.querySelector('h2');
-            expect(button).toBeInTheDocument();
-        })
+        
     })
 
     describe('Lifecycle', () => {

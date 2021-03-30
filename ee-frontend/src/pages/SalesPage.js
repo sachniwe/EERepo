@@ -21,22 +21,13 @@ export class SalesPage extends React.Component {
     render() {
         return (
             <div>
-                <h2 className="display-4 mb-6">Baked Items</h2>
-                <div className="row"></div>
-                <div>
-                    <div data-testid="itemGroup">
-                        {this.state.items.map(item => {
+                <h3>Baked Items</h3>
+                <ul className="items">
+                {this.state.items.map(item => {
                             return (<SalesItem item={item} />);
                         }
                         )}
-                    </div>
-                </div>
-                <div className="row"></div>
-
-                <label>Total amount: </label>
-                <br />
-                <button type="button" className="btn btn-primary">Checkout</button>
-
+                </ul>
             </div>
 
         )

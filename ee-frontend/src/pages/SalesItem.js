@@ -1,13 +1,19 @@
 import React from 'react';
+import formatCurrency from '../utils';
 
 const SalesItem = (props) => {
   return (
-    <div className="col-md-3"  >
-      <button>
-          <img src={`/images/${props.item.image}`} width="300" height="300" />
-      </button>
-      <p style={{ 'text-position': 'absolute' }}>{props.item.price}€</p>
-
+    <div className="item">
+            <a href="#">
+                <img src={`/images/${props.item.image}`}/>
+                
+            </a>
+            <div className="item-name">
+                <div>{props.item.name}</div>
+            </div>
+            <div className="item-price">
+              <div>{formatCurrency(props.item.price)}</div>
+            </div>
     </div>
 
   );
